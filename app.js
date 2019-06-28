@@ -39,5 +39,9 @@ rl.on('close', () =>{
   const rankingStrings = rankingArray.map(([key, value]) => {
     return key + ': ' + value.popu10 + '=>' + value.popu15 + '変化率:' + value.change;
   });
-  console.log(rankingStrings);
+  const rankingLast = rankingStrings.map((e, i) => {
+    i += 1;
+    return "ランキング" + i + "位は" + e;
+  });
+  console.log(rankingLast);
 });
